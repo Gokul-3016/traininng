@@ -1,0 +1,17 @@
+{
+  "valid_schema" : {
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "message",
+    "_id"
+  ]
+}
+}
