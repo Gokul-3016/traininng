@@ -9,9 +9,8 @@ chai.use(require('chai-json-schema'));
 const url =supertest(endpoint.baseurl);
 
 describe('delete users from the endpoints', () => {
-    it('delete user details in the id', (done) => {
+    it('delete user details in the id', async() => {
         const res =  url.delete(endpoint.deleteuser)
-        done()
         .expect(200)
         .expect((res) => {
         expect(res.body).to.be.equal(jsonschema2.valid_schema)
