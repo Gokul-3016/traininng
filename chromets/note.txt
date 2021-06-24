@@ -1,0 +1,77 @@
+01---npm init -y
+02---npm i @wdio/cli
+03---npx wdio config =>typedcript,mocha,pageobjects
+04---To have TypeScript support please add the following packages to your "types" list:
+{
+  "compilerOptions": {
+    "types": ["node", "webdriverio/async", "@wdio/mocha-framework", "expect-webdriverio"]
+  }
+}
+For for information on TypeScript integration check out: https://webdriver.io/docs/typescript
+
+05---ERROR
+{
+	"resource": "/e:/gokul/training/typescript/chromets/test/specs/example.e2e.ts",
+	"owner": "typescript",
+	"code": "2581",
+	"severity": 8,
+	"message": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.",
+	"source": "ts",
+	"startLineNumber": 7,
+	"startColumn": 22,
+	"endLineNumber": 7,
+	"endColumn": 23
+}
+06----- chromedriver@91.0.1 install E:\gokul\training\typescript\chromets\node_modules\chromedriver
+> node install.js
+
+Current existing ChromeDriver binary is unavailable, proceeding with download and extraction.
+Downloading from file:  https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_win32.zip
+Saving to file: C:\Users\malika\AppData\Local\Temp\91.0.4472.101\chromedriver\chromedriver_win32.zip
+Received 1025K..
+
+07----- create tsconfig.json & add 04 and other functionalities to it
+
+08-----ERROR
+{
+	"resource": "/e:/gokul/training/typescript/chromets/utilities/methods.ts",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'element' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 9,
+	"startColumn": 19,
+	"endLineNumber": 9,
+	"endColumn": 26
+}
+solition-------
+// disable this rule:
+// "strict": true,
+// enable this rule:
+"noImplicitAny": false
+
+09----------ERROR
+{
+	"resource": "/e:/gokul/training/typescript/chromets/page/homeppage.ts",
+	"owner": "typescript",
+	"code": "2307",
+	"severity": 8,
+	"message": "Cannot find module './url' or its corresponding type declarations.",
+	"source": "ts",
+	"startLineNumber": 1,
+	"startColumn": 17,
+	"endLineNumber": 1,
+	"endColumn": 24
+}
+
+010------ error: Error: Module tsconfig-paths/register can't get loaded. Are you sure you have installed it?
+Note: if you've installed WebdriverIO globally you need to install these external modules globally too!
+add compiiler in wdio.conf.ts to mocha below its timeout(line 150)
+compilers: [
+            'tsconfig-paths/register',
+        ],
+
+011----in test folder import path dont need dot in front if had shows error and backslash for direct file in the project like url.ts
+
+012----element functions should declare in the test folder
