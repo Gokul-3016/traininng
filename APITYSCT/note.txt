@@ -1,0 +1,42 @@
+npm init -y
+
+dev should be empty all packages should take place in dependencies
+npm i typescript @types/mocha @types/node @types/chai @types/supertest @types/chai-json-schema chai mocha supertest chai-json-schema
+
+npm i ts-node
+
+{	"resource": "/e:/gokul/training/typescript/APITYSCT/test/patch.ts",
+	"owner": "typescript",
+	"code": "2732",
+	"severity": 8,
+	"message": "Cannot find module 'jsonschema/patchschema.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.",
+	"source": "ts",
+	"startLineNumber": 5,
+	"startColumn": 30,
+	"endLineNumber": 5,
+	"endColumn": 59}
+
+ solution : --------add to tsconfig.json for importing file with .json extension
+"resolveJsonModule":true
+
+{	"resource": "/e:/gokul/training/typescript/APITYSCT/test/patch.ts",
+	"owner": "typescript",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'jsonschema' does not exist on type 'Assertion'.",
+	"source": "ts",
+	"startLineNumber": 21,
+	"startColumn": 37,
+	"endLineNumber": 21,
+	"endColumn": 47}
+	
+	solution : path in tsconfig.json should be empty but active
+
+run command for supertest api	
+ "test": "mocha --require ts-node/register --watch-extensions ts 'test/**/*.ts'",
+
+
+
+
+
+
