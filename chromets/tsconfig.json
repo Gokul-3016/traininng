@@ -20,14 +20,9 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
   },
-"include": [
-     "./test/specs/**/*.ts",
-     "src/homepage.ts",
-     "./url.ts",
-     "./wdio.conf.ts",
-     
- ],
+
  "exclude": [
-  "./node_modules"
+  "./node_modules",
+  
 ]
 }

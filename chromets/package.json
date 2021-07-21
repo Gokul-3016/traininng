@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio wdio.conf.ts"
+    "test": "npx wdio wdio.conf.ts",
+    "report": "allure generate ./testReport/allure --clean && allure open",
+    "report.clean": "shx rm -rf ./testReport/allure/ && shx rm -rf ./allure-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^7.7.4",
+    "@wdio/sync": "^7.7.8",
     "tsconfig-paths": "^3.9.0"
   },
   "devDependencies": {

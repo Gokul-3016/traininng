@@ -7,7 +7,7 @@ describe('internet home page', () => {
 
   it('valid the title of homepage is the internet', async () => {
     //home21.haveTitle();
-    browser.url(url.homeurl)
+    browser.url(url.herokuapp_url)
     expect(browser).toHaveTitle(data.title);
 });
 it('disappearing elements in herokuapp', async () => {

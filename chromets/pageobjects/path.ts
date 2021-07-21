@@ -6,6 +6,21 @@ export default {
     search:"//span[text()='Search']",
     txtbox:"#docsearch-input",
     frstspan:"(//span[@class='DocSearch-Hit-title'])[1]",
-    install:"(//span[@class='token plain'])[2]"
-    
+    install:"(//span[@class='token plain'])[2]",
+    fromCity:"//input[@data-message='Please enter a source city']",
+    toCity:"//input[@data-message='Please enter a destination city']",
+    rideDateTab:"//input[@id='onward_cal']",
+    rideDate:"//input[@data-caleng='<p1>']",
+    searchBuses:"//button[@id='search_btn']",
+    alltravelid:"//div[@class='travels lh-24 f-bold d-color']",
+    parveen:"(//div[@class='travels lh-24 f-bold d-color'])[2]",
+    parveenseats:"(//div[@class='button view-seats fr'])[2]",
+    selectSeat:"//canvas[@class='pointer']",
+    //selectseat:"//div[@class='lower-canvas canvas-wrapper']",
+    boardingpoint:"(//div[@class='radio-unchecked'])[1]",
+    droppingTab:"//span[contains(text(),'DROPPING POINT')]",
+    droppingpoint:"(//div[@class='radio-unchecked'])[13]",
+    continuebtn:"//button[text()='continue']",
+    proceedbtn:"//button[text()='Proceed to book']"
+
 }

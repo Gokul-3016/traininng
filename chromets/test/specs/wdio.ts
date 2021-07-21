@@ -7,7 +7,7 @@ describe('internet home page', () => {
 
     it('valid the title of homepage is the internet', async () => {
         //home21.haveTitle();
-        browser.url(url.wdiourl)
+        browser.url(url.wdio_url)
         browser.setWindowSize(2400, 1200)
         expect(browser).toHaveTitle(data.title1);
     });
