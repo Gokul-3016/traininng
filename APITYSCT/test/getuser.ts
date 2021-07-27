@@ -6,7 +6,7 @@ import getschema from "../jsonschema/getschema.json";
 const url = supertest(conf.baseurl);
 describe('validate the responses for gte user scenarios', () => {
     it('enter the valid user', async () => {
-        const response =  url.post(conf.validuser)
+        const response =  url.get(conf.validuser)
            
             .expect(200)
             .expect((res) => {
