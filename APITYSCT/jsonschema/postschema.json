@@ -1,0 +1,49 @@
+ {
+  "create_schema" : {
+    
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "job": {
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "createdAt": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "name",
+      "job",
+      "id",
+      "createdAt"
+    ]
+  }, 
+        "valid_schema": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "token"
+        ]
+      
+    },
+    "invalid_schema" : {
+           "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "error"
+      ]
+    }
+}
